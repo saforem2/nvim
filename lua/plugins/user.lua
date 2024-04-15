@@ -300,11 +300,11 @@ return {
           -- Note that setting an entry here replaces all other patterns for this entry.
           -- By setting the 'default' entry below, you can control which nodes you want to
           -- appear in the context window.
-          -- default = {
-          "class",
-          "function",
-          "method",
-          -- },
+          default = {
+            "class",
+            "function",
+            "method",
+          },
         },
       }
     end,
