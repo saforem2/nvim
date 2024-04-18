@@ -608,7 +608,7 @@ return {
   },
   { "dstein64/vim-startuptime" },
   { "rktjmp/shipwright.nvim" },
-  { dir = '~/projects/saforem2/glitz', lazy = false },
+  { "saforem2/glitz", lazy = true },
 
   -- { "tomtom/tcomment_vim" },
   -- {
