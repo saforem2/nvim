@@ -92,12 +92,12 @@ return {
   {
     "rafcamlet/nvim-luapad",
   },
-  {
-    "rafi/awesome-vim-colorschemes",
-  },
-  {
-    "flazz/vim-colorschemes",
-  },
+  -- {
+  --   "rafi/awesome-vim-colorschemes",
+  -- },
+  -- {
+  --   "flazz/vim-colorschemes",
+  -- },
   {
     "tpope/vim-repeat",
   },
@@ -418,7 +418,7 @@ return {
   { "sainnhe/sonokai" },
   { "yonlu/omni.vim" },
   { "NTBBloodbath/doom-one.nvim" },
-  { "cpea2506/one_monokai.nvim" },
+  -- { "cpea2506/one_monokai.nvim" },
   { "jghauser/mkdir.nvim" },
   { "navarasu/onedark.nvim" },
   { "hkupty/iron.nvim" }, -- {
@@ -472,27 +472,27 @@ return {
   {
     "nyoom-engineering/oxocarbon.nvim",
   },
-  {
-    "cpea2506/one_monokai.nvim",
-    config = function()
-      require("one_monokai").setup {
-        transparent = false, -- enable transparent window
-        colors = {
-          darkbg = "#1c1c1c", -- add new color
-          pink = "#ec6075", -- replace default color
-        },
-        themes = function(colors)
-          -- change highlight of some groups,
-          -- the key and value will be passed respectively to "nvim_set_hl"
-          return {
-            Normal = { bg = colors.darkbg },
-            ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
-            ["@lsp.type.keyword"] = { link = "@keyword" },
-          }
-        end,
-      }
-    end,
-  },
+  -- {
+  --   "cpea2506/one_monokai.nvim",
+  --   config = function()
+  --     require("one_monokai").setup {
+  --       transparent = false, -- enable transparent window
+  --       colors = {
+  --         darkbg = "#1c1c1c", -- add new color
+  --         pink = "#ec6075", -- replace default color
+  --       },
+  --       themes = function(colors)
+  --         -- change highlight of some groups,
+  --         -- the key and value will be passed respectively to "nvim_set_hl"
+  --         return {
+  --           Normal = { bg = colors.darkbg },
+  --           ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
+  --           ["@lsp.type.keyword"] = { link = "@keyword" },
+  --         }
+  --       end,
+  --     }
+  --   end,
+  -- },
   {
     "norcalli/nvim-terminal.lua",
     config = function() require("terminal").setup() end,
@@ -607,6 +607,9 @@ return {
     end,
   },
   { "dstein64/vim-startuptime" },
+  { "rktjmp/shipwright.nvim" },
+  { dir = '~/projects/saforem2/glitz', lazy = false },
+
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
