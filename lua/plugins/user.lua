@@ -9,20 +9,63 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+
+  { "p00f/nvim-ts-rainbow" },
+  { "dstein64/vim-startuptime" },
+  { "rktjmp/shipwright.nvim" },
+  { "saforem2/glitz", lazy = true },
+  { "NTBBloodbath/doom-one.nvim" },
+  { "navarasu/onedark.nvim" },
+  { "marko-cerovac/material.nvim" },
+  { "navarasu/onedark.nvim" },
+  { "sainnhe/sonokai" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "tanvirtin/monokai.nvim" },
+  { "bluz71/vim-nightfly-guicolors" },
+  { "rafamadriz/neon" },
+  { "sainnhe/sonokai" },
+  { "yonlu/omni.vim" },
   { "lukas-reinke/indent-blankline.nvim", enabled = false },
-  {
-    "phaazon/hop.nvim",
-    event = "BufRead",
-    config = function()
-      require("hop").setup()
-      vim.api.nvim_set_keymap("n", ";", ":HopChar2<CR>", { silent = true })
-      vim.api.nvim_set_keymap("n", "W", ":HopWord<CR>", { silent = true })
-    end,
-  },
-  {
-    "ggandor/lightspeed.nvim",
-    event = "BufRead",
-  },
+  { "wakatime/vim-wakatime" },
+  { "mbbill/undotree" },
+  { "kosayoda/nvim-lightbulb" },
+  { "machakann/vim-sandwich" },
+  { "rktjmp/lush.nvim" },
+  { "vim-python/python-syntax" },
+  { "Vimjas/vim-python-pep8-indent" },
+  { "rafcamlet/nvim-luapad" },
+  { "tpope/vim-repeat" },
+  { "kreskij/Repeatable.vim" },
+  { "easymotion/vim-easymotion" },
+  { "lervag/vimtex" },
+  { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
+  { "folke/trouble.nvim", cmd = "TroubleToggle" },
+  { "npxbr/glow.nvim", ft = { "markdown", "quarto" } },
+  { "chaoren/vim-wordmotion" },
+  { "jbyuki/nabla.nvim" },
+  { "knubie/vim-kitty-navigator" },
+  { "fladson/vim-kitty" },
+  { "jmbuhr/otter.nvim", opts = {} },
+  { "folke/lsp-colors.nvim", event = "BufRead" },
+  { "felipec/vim-sanegx" },
+  { "godlygeek/tabular" },
+  { "preservim/vim-markdown" },
+  { "brenoprata10/nvim-highlight-colors" },
+  { "nvim-telescope/telescope-file-browser.nvim" },
+  { "rrethy/vim-illuminate" },
+  { "preservim/vim-pencil" },
+  { "dhruvasagar/vim-table-mode" },
+  { "jghauser/mkdir.nvim" },
+  { "hkupty/iron.nvim" },
+  { "Bekaboo/deadcolumn.nvim" },
+  { "rktjmp/lush.nvim" },
+  { "bfredl/nvim-ipy" },
+  { "lvimuser/lsp-inlayhints.nvim" },
+  { "preservim/vim-markdown" },
+  { "HiPhish/nvim-ts-rainbow2" },
+  { "vim-pandoc/vim-pandoc-syntax" },
+  { "ggandor/lightspeed.nvim", event = "BufRead" },
+
   {
     "nacro90/numb.nvim",
     event = "BufRead",
@@ -34,78 +77,13 @@ return {
     end,
   },
   {
-    "kevinhwang91/nvim-bqf",
-    event = { "BufRead", "BufNew" },
-    config = function()
-      require("bqf").setup {
-        auto_enable = true,
-        preview = {
-          win_height = 12,
-          win_vheight = 12,
-          delay_syntax = 80,
-          border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
-        },
-        func_map = {
-          vsplit = "",
-          ptogglemode = "z,",
-          stoggleup = "",
-        },
-        filter = {
-          fzf = {
-            action_for = { ["ctrl-s"] = "split" },
-            extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
-          },
-        },
-      }
-    end,
-  },
-  {
     "andymass/vim-matchup",
     event = "CursorMoved",
     config = function() vim.g.matchup_matchparen_offscreen = { method = "popup" } end,
   },
   {
-    "wakatime/vim-wakatime",
-  },
-  {
-    "mbbill/undotree",
-  },
-  {
     "nvim-treesitter/playground",
     cmd = "TSHighlightCapturesUnderCursor",
-  },
-  {
-    "kosayoda/nvim-lightbulb",
-  },
-  {
-    "machakann/vim-sandwich",
-  },
-  {
-    "rktjmp/lush.nvim",
-  },
-  {
-    "vim-python/python-syntax",
-  },
-  {
-    "Vimjas/vim-python-pep8-indent",
-  },
-  {
-    "rafcamlet/nvim-luapad",
-  },
-  -- {
-  --   "rafi/awesome-vim-colorschemes",
-  -- },
-  -- {
-  --   "flazz/vim-colorschemes",
-  -- },
-  {
-    "tpope/vim-repeat",
-  },
-  {
-    "kreskij/Repeatable.vim",
-  },
-  {
-    "easymotion/vim-easymotion",
   },
   {
     "chentoast/marks.nvim",
@@ -121,39 +99,6 @@ return {
       }
     end,
   },
-  {
-    "lervag/vimtex",
-  },
-  -- {
-  --   'NvChad/nvim-colorizer.lua',
-  --   config = require('colorizer').setup({
-  --     user_default_options = {
-  --       RGB      = true;         -- #RGB hex codes
-  --       RRGGBB   = true;         -- #RRGGBB hex codes
-  --       names    = true;         -- "Name" codes like Blue
-  --       RRGGBBAA = true;        -- #RRGGBBAA hex codes
-  --       rgb_fn   = true;        -- CSS rgb() and rgba() functions
-  --       hsl_fn   = true;        -- CSS hsl() and hsla() functions
-  --       css      = true;        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-  --       css_fn   = true;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
-  --       -- Available modes: foreground, background
-  --       mode     = 'virtualtext'; -- Set the display mode.
-  --       tailwind = true,
-  --       sass = { enable = true, parsers = {"css"} },
-  --       virtualtext = "■",
-  --     },
-  --   })
-  -- },
-  -- {
-  --   'brenoprata10/nvim-highlight-colors',
-  --   config = function()
-  --     require('nvim-highlight-colors').setup({
-  --       render = 'foreground',
-  --       enable_named_colors = true,
-  --       enable_tailwind = true,
-  --     })
-  --   end,
-  -- },
   {
     "rmagatti/goto-preview",
     config = function()
@@ -188,30 +133,12 @@ return {
     end,
   },
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-  },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  {
-    "npxbr/glow.nvim",
-    ft = { "markdown", "quarto" },
-  },
-  {
     "glacambre/firenvim",
     run = function() vim.fn["firenvim#install"](0) end,
   },
   {
     "dccsillag/magma-nvim",
     run = ":UpdateRemotePlugins",
-  },
-  {
-    "chaoren/vim-wordmotion",
-  },
-  {
-    "jbyuki/nabla.nvim",
   },
   {
     "hoschi/yode-nvim",
@@ -221,49 +148,6 @@ return {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   },
-  {
-    "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup {
-        window = {
-          backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-          -- height and width can be:
-          -- * an absolute number of cells when > 1
-          -- * a percentage of the width / height of the editor when <= 1
-          -- * a function that returns the width or the height
-          -- by default, no options are changed for the Zen window
-          -- uncomment any of the options below, or add other vim.wo options you want to apply
-          width = 120, -- width of the Zen window
-          height = 1, -- height of the Zen window
-          options = {
-            -- signcolumn = "no", -- disable signcolumn
-            number = false, -- disable number column
-            relativenumber = false, -- disable relative numbers
-            cursorline = false, -- disable cursorline
-            cursorcolumn = false, -- disable cursor column
-            foldcolumn = "0", -- disable fold column
-            list = false, -- disable whitespace characters
-          },
-        },
-        plugins = {
-          options = {
-            enabled = true,
-            ruler = false, -- disables the ruler text in the cmd line area
-            showcmd = false, -- disables the command in the last line of the screen,
-            twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
-            gitsigns = { enabled = false }, -- disables git signs
-            tmux = { enabled = false }, -- disables the tmux statusline this will change the font size on kitty when in zen mode
-            kitty = {
-              enabled = true,
-              font = "+4", -- font size increment
-            },
-          },
-        },
-      }
-    end,
-  },
-  { "knubie/vim-kitty-navigator" },
-  { "fladson/vim-kitty" },
   {
     "kdheepak/tabline.nvim",
     config = function()
@@ -287,7 +171,6 @@ return {
       }
     end,
   },
-  { "p00f/nvim-ts-rainbow" },
   {
     "romgrk/nvim-treesitter-context",
     config = function()
@@ -310,60 +193,10 @@ return {
     end,
   },
   {
-    "folke/lsp-colors.nvim",
-    event = "BufRead",
-  },
-  { "felipec/vim-sanegx" },
-  {
     "turbio/bracey.vim",
     cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
     run = "npm install --prefix server",
   },
-  -- {
-  --   "johnfrankmorgan/whitespace.nvim",
-  --   config = function()
-  --     require('whitespace-nvim').setup({
-  --       -- configuration options and their defaults `highlight` configures
-  --       -- which highlight is used to display
-  --       -- trailing whitespace
-  --       highlight = 'DiffDelete',
-  --       -- `ignored_filetypes` configures which filetypes to ignore when
-  --       -- displaying trailing whitespace
-  --       ignored_filetypes = { 'TelescopePrompt' },
-  --       -- remove trailing whitespace with a keybinding
-  --       vim.api.nvim_set_keymap(
-  --         'n',
-  --         '<Leader>t', "[[<cmd>lua require('whitespace-nvim').trim()<CR>]]",
-  --         { noremap = true }
-  --       )
-  --     })
-  --   end,
-  -- },
-  { "godlygeek/tabular" },
-  { "preservim/vim-markdown" },
-  -- { 'Iron-E/nvim-highlite' },
-  { "brenoprata10/nvim-highlight-colors" },
-  -- {
-  --   'rrethy/vim-hexokinase',
-  --   run = 'make hexokinase',
-  --   config = function()
-  --     vim.g["Hexokinase_highlighters"] = {
-  --       'virtual',
-  --       'sign_column',
-  --     }
-  --   end,
-  -- },
-  { "nvim-telescope/telescope-file-browser.nvim" },
-  -- {
-  --   "folke/todo-comments.nvim",
-  --   lazy = false,
-  --   -- config = function()
-  --   --   require('todo-comments.nvim').setup({})
-  --   -- end
-  --   -- config = function()
-  --   -- require("user.todo-comments").config()
-  --   -- end,
-  -- },
   {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
@@ -375,7 +208,6 @@ return {
       }
     end,
   },
-  { "rrethy/vim-illuminate" },
   {
     "mfussenegger/nvim-dap-python",
     config = function() require("dap-python").setup "~/.virtualenvs/debugpy/bin/python" end,
@@ -410,24 +242,6 @@ return {
       })
     end,
   },
-  { "preservim/vim-pencil" },
-  { "dhruvasagar/vim-table-mode" },
-  { "tanvirtin/monokai.nvim" },
-  { "bluz71/vim-nightfly-guicolors" },
-  { "rafamadriz/neon" },
-  { "sainnhe/sonokai" },
-  { "yonlu/omni.vim" },
-  { "NTBBloodbath/doom-one.nvim" },
-  -- { "cpea2506/one_monokai.nvim" },
-  { "jghauser/mkdir.nvim" },
-  { "navarasu/onedark.nvim" },
-  { "hkupty/iron.nvim" }, -- {
-  --   'hkupty/iron.nvim',
-  --   config = function()
-  --     require('user.plugins.iron')
-  --   end
-  -- },
-  { "bfredl/nvim-ipy" },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     run = "make",
@@ -441,61 +255,8 @@ return {
     },
   },
   {
-    "jmbuhr/otter.nvim",
-    opts = {},
-    -- dev = false,
-    -- opts = {
-    --   lsp = {
-    --     hover = {
-    --       require("user.style").border
-    --     }
-    --   }
-    -- },
-  },
-  { "Bekaboo/deadcolumn.nvim" },
-  {
     "projekt0n/circles.nvim",
     requires = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
-    "rktjmp/lush.nvim",
-  },
-  {
-    "marko-cerovac/material.nvim",
-  },
-  {
-    "navarasu/onedark.nvim",
-  },
-  {
-    "sainnhe/sonokai",
-  },
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-  },
-  -- {
-  --   "cpea2506/one_monokai.nvim",
-  --   config = function()
-  --     require("one_monokai").setup {
-  --       transparent = false, -- enable transparent window
-  --       colors = {
-  --         darkbg = "#1c1c1c", -- add new color
-  --         pink = "#ec6075", -- replace default color
-  --       },
-  --       themes = function(colors)
-  --         -- change highlight of some groups,
-  --         -- the key and value will be passed respectively to "nvim_set_hl"
-  --         return {
-  --           Normal = { bg = colors.darkbg },
-  --           ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
-  --           ["@lsp.type.keyword"] = { link = "@keyword" },
-  --         }
-  --       end,
-  --     }
-  --   end,
-  -- },
-  {
-    "norcalli/nvim-terminal.lua",
-    config = function() require("terminal").setup() end,
   },
   {
     "simrat39/rust-tools.nvim",
@@ -514,22 +275,6 @@ return {
     end,
   },
   {
-    "lvimuser/lsp-inlayhints.nvim",
-  },
-  {
-    "preservim/vim-markdown",
-  },
-  {
-    "HiPhish/nvim-ts-rainbow2",
-  },
-  {
-    "vim-pandoc/vim-pandoc-syntax",
-  },
-  {
-    "norcalli/nvim-terminal.lua",
-    config = function() require("terminal").setup() end,
-  },
-  {
     "Exafunction/codeium.vim",
     config = function()
       vim.g.codeium_disable_bindings = 1
@@ -537,63 +282,6 @@ return {
       vim.keymap.set("i", "<c-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
       vim.keymap.set("i", "<c-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
       vim.keymap.set("i", "<c-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
-    end,
-  },
-  {
-    "anuvyklack/pretty-fold.nvim",
-    config = function()
-      require("pretty-fold").setup {
-        sections = {
-          left = {
-            "content",
-          },
-          right = {
-            " ",
-            "number_of_folded_lines",
-            ": ",
-            "percentage",
-            " ",
-            function(config) return config.fill_char:rep(3) end,
-          },
-        },
-        fill_char = "•",
-        remove_fold_markers = true,
-        -- Keep the indentation of the content of the fold string.
-        keep_indentation = true,
-        -- Possible values:
-        -- "delete" : Delete all comment signs from the fold string.
-        -- "spaces" : Replace all comment signs with equal number of spaces.
-        -- false    : Do nothing with comment signs.
-        process_comment_signs = "spaces",
-        -- Comment signs additional to the value of `&commentstring` option.
-        comment_signs = {},
-        -- List of patterns that will be removed from content foldtext section.
-        stop_words = {
-          "@brief%s*", -- (for C++) Remove '@brief' and all spaces after.
-        },
-        add_close_pattern = true, -- true, 'last_line' or false
-        matchup_patterns = {
-          { "{", "}" },
-          { "%(", ")" }, -- % to escape lua pattern char
-          { "%[", "]" }, -- % to escape lua pattern char
-        },
-        ft_ignore = { "neorg" },
-      }
-    end,
-  },
-  {
-    "unblevable/quick-scope",
-  },
-  {},
-  {
-    "luk400/vim-jukit",
-    config = function()
-      -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
-      vim.g.jukit_mappings_ext_enabled = { "py", "ipynb" }
-      vim.g.jukit_layout = -1
-      -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
-      -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
-      -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
     end,
   },
   {
@@ -606,10 +294,222 @@ return {
       -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
     end,
   },
-  { "dstein64/vim-startuptime" },
-  { "rktjmp/shipwright.nvim" },
-  { "saforem2/glitz", lazy = true },
 
+  -- {
+  --   "norcalli/nvim-terminal.lua",
+  --   config = function() require("terminal").setup() end,
+  -- },
+  -- {
+  --   "norcalli/nvim-terminal.lua",
+  --   config = function() require("terminal").setup() end,
+  -- },
+  -- {
+  --   "phaazon/hop.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("hop").setup()
+  --     vim.api.nvim_set_keymap("n", ";", ":HopChar2<CR>", { silent = true })
+  --     vim.api.nvim_set_keymap("n", "W", ":HopWord<CR>", { silent = true })
+  --   end,
+  -- },
+  -- {
+  --   "kevinhwang91/nvim-bqf",
+  --   event = { "BufRead", "BufNew" },
+  --   config = function()
+  --     require("bqf").setup {
+  --       auto_enable = true,
+  --       preview = {
+  --         win_height = 12,
+  --         win_vheight = 12,
+  --         delay_syntax = 80,
+  --         border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
+  --       },
+  --       func_map = {
+  --         vsplit = "",
+  --         ptogglemode = "z,",
+  --         stoggleup = "",
+  --       },
+  --       filter = {
+  --         fzf = {
+  --           action_for = { ["ctrl-s"] = "split" },
+  --           extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "rafi/awesome-vim-colorschemes",
+  -- },
+  -- {
+  --   "flazz/vim-colorschemes",
+  -- },
+  -- {
+  --   'NvChad/nvim-colorizer.lua',
+  --   config = require('colorizer').setup({
+  --     user_default_options = {
+  --       RGB      = true;         -- #RGB hex codes
+  --       RRGGBB   = true;         -- #RRGGBB hex codes
+  --       names    = true;         -- "Name" codes like Blue
+  --       RRGGBBAA = true;        -- #RRGGBBAA hex codes
+  --       rgb_fn   = true;        -- CSS rgb() and rgba() functions
+  --       hsl_fn   = true;        -- CSS hsl() and hsla() functions
+  --       css      = true;        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+  --       css_fn   = true;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  --       -- Available modes: foreground, background
+  --       mode     = 'virtualtext'; -- Set the display mode.
+  --       tailwind = true,
+  --       sass = { enable = true, parsers = {"css"} },
+  --       virtualtext = "■",
+  --     },
+  --   })
+  -- },
+  -- {
+  --   'brenoprata10/nvim-highlight-colors',
+  --   config = function()
+  --     require('nvim-highlight-colors').setup({
+  --       render = 'foreground',
+  --       enable_named_colors = true,
+  --       enable_tailwind = true,
+  --     })
+  --   end,
+  -- },
+  -- {
+  --   "folke/zen-mode.nvim",
+  --   config = function()
+  --     require("zen-mode").setup {
+  --       window = {
+  --         backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+  --         -- height and width can be:
+  --         -- * an absolute number of cells when > 1
+  --         -- * a percentage of the width / height of the editor when <= 1
+  --         -- * a function that returns the width or the height
+  --         -- by default, no options are changed for the Zen window
+  --         -- uncomment any of the options below, or add other vim.wo options you want to apply
+  --         width = 120, -- width of the Zen window
+  --         height = 1, -- height of the Zen window
+  --         options = {
+  --           -- signcolumn = "no", -- disable signcolumn
+  --           number = false, -- disable number column
+  --           relativenumber = false, -- disable relative numbers
+  --           cursorline = false, -- disable cursorline
+  --           cursorcolumn = false, -- disable cursor column
+  --           foldcolumn = "0", -- disable fold column
+  --           list = false, -- disable whitespace characters
+  --         },
+  --       },
+  --       plugins = {
+  --         options = {
+  --           enabled = true,
+  --           ruler = false, -- disables the ruler text in the cmd line area
+  --           showcmd = false, -- disables the command in the last line of the screen,
+  --           twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+  --           gitsigns = { enabled = false }, -- disables git signs
+  --           tmux = { enabled = false }, -- disables the tmux statusline this will change the font size on kitty when in zen mode
+  --           kitty = {
+  --             enabled = true,
+  --             font = "+4", -- font size increment
+  --           },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "johnfrankmorgan/whitespace.nvim",
+  --   config = function()
+  --     require('whitespace-nvim').setup({
+  --       -- configuration options and their defaults `highlight` configures
+  --       -- which highlight is used to display
+  --       -- trailing whitespace
+  --       highlight = 'DiffDelete',
+  --       -- `ignored_filetypes` configures which filetypes to ignore when
+  --       -- displaying trailing whitespace
+  --       ignored_filetypes = { 'TelescopePrompt' },
+  --       -- remove trailing whitespace with a keybinding
+  --       vim.api.nvim_set_keymap(
+  --         'n',
+  --         '<Leader>t', "[[<cmd>lua require('whitespace-nvim').trim()<CR>]]",
+  --         { noremap = true }
+  --       )
+  --     })
+  --   end,
+  -- },
+  -- { 'Iron-E/nvim-highlite' },
+  -- {
+  --   'rrethy/vim-hexokinase',
+  --   run = 'make hexokinase',
+  --   config = function()
+  --     vim.g["Hexokinase_highlighters"] = {
+  --       'virtual',
+  --       'sign_column',
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   lazy = false,
+  --   -- config = function()
+  --   --   require('todo-comments.nvim').setup({})
+  --   -- end
+  --   -- config = function()
+  --   -- require("user.todo-comments").config()
+  --   -- end,
+  -- },
+  -- {
+  --   "anuvyklack/pretty-fold.nvim",
+  --   config = function()
+  --     require("pretty-fold").setup {
+  --       sections = {
+  --         left = {
+  --           "content",
+  --         },
+  --         right = {
+  --           " ",
+  --           "number_of_folded_lines",
+  --           ": ",
+  --           "percentage",
+  --           " ",
+  --           function(config) return config.fill_char:rep(3) end,
+  --         },
+  --       },
+  --       fill_char = "•",
+  --       remove_fold_markers = true,
+  --       -- Keep the indentation of the content of the fold string.
+  --       keep_indentation = true,
+  --       -- Possible values:
+  --       -- "delete" : Delete all comment signs from the fold string.
+  --       -- "spaces" : Replace all comment signs with equal number of spaces.
+  --       -- false    : Do nothing with comment signs.
+  --       process_comment_signs = "spaces",
+  --       -- Comment signs additional to the value of `&commentstring` option.
+  --       comment_signs = {},
+  --       -- List of patterns that will be removed from content foldtext section.
+  --       stop_words = {
+  --         "@brief%s*", -- (for C++) Remove '@brief' and all spaces after.
+  --       },
+  --       add_close_pattern = true, -- true, 'last_line' or false
+  --       matchup_patterns = {
+  --         { "{", "}" },
+  --         { "%(", ")" }, -- % to escape lua pattern char
+  --         { "%[", "]" }, -- % to escape lua pattern char
+  --       },
+  --       ft_ignore = { "neorg" },
+  --     }
+  --   end,
+  -- },
+  {},
+  -- {
+  --   "luk400/vim-jukit",
+  --   config = function()
+  --     -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
+  --     vim.g.jukit_mappings_ext_enabled = { "py", "ipynb" }
+  --     vim.g.jukit_layout = -1
+  --     -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
+  --     -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+  --     -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
+  --   end,
+  -- },
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
@@ -617,4 +517,5 @@ return {
   --   require('wf').setup()
   --   end
   -- }
+
 }
