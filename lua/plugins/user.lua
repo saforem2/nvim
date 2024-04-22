@@ -10,6 +10,7 @@ return {
   --   end,
   -- },
 
+  { "LunarVim/bigfile.nvim" },
   { "p00f/nvim-ts-rainbow" },
   { "dstein64/vim-startuptime" },
   { "rktjmp/shipwright.nvim" },
@@ -65,6 +66,44 @@ return {
   { "HiPhish/nvim-ts-rainbow2" },
   { "vim-pandoc/vim-pandoc-syntax" },
   { "ggandor/lightspeed.nvim", event = "BufRead" },
+
+  { -- interactive global search and replace
+    'nvim-pack/nvim-spectre',
+    cmd = { 'Spectre' },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+  },
+
+    { -- highlight markdown headings and code blocks etc.
+    'lukas-reineke/headlines.nvim',
+    enabled = false,
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require('headlines').setup {
+        quarto = {
+          query = vim.treesitter.query.parse(
+            'markdown',
+            [[
+                (fenced_code_block) @codeblock
+                ]]
+          ),
+          codeblock_highlight = 'CodeBlock',
+          treesitter_language = 'markdown',
+        },
+        markdown = {
+          query = vim.treesitter.query.parse(
+            'markdown',
+            [[
+                (fenced_code_block) @codeblock
+                ]]
+          ),
+          codeblock_highlight = 'CodeBlock',
+        },
+      }
+    end,
+  },
+
 
   {
     "nacro90/numb.nvim",
@@ -171,6 +210,7 @@ return {
       }
     end,
   },
+
   {
     "romgrk/nvim-treesitter-context",
     config = function()
