@@ -32,11 +32,40 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = false, -- sets vim.opt.wrap
+        colorcolumn = "80",
+        expandtab = true,
+        tabstop = 4,
+        softtabstop = 4,
+        shiftwidth = 4,
+        linebreak = true,
+        showbreak = "==>",
+        list = true,  -- show whitespace characters
+        listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
+        textwidth = 80,
+        autowrite = true,
+        autochdir = false,
+        termguicolors = true,
+        undofile = true,
+        sidescrolloff = 30,
+        scrolloff = 10,
+        undolevels = 10000,
+        fillchars = {
+          foldopen = "",
+          foldclose = "",
+          -- fold = "⸱",
+          fold = " ",
+          foldsep = " ",
+          diff = "╱",
+          eob = " ",
+        },
+
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        jukit_mappings_ext_enabled = {"py", "ipynb"},
+
       },
     },
     -- Mappings can be configured through AstroCore as well.

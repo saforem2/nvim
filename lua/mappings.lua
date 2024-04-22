@@ -16,14 +16,17 @@ return {
         ["<S-W"] = {
             "<cmd>HopWord<CR>",
             desc = "Hop Word",
+            opts = opts,
         },
         ["<S-h>"] = {
             "<cmd>HopChar2<CR>",
-            desc = "Hop Char 2"
+            desc = "Hop Char 2",
+            opts = opts,
         },
         ["<leader>b<"] = {
             "<cmd>BufferMovePrevious<cr>",
-            desc="[BarBar] Buffer Move Previous"
+            desc="[BarBar] Buffer Move Previous",
+            opts = opts,
         },
         ["<leader>b>"] = {
             "<cmd>BufferMoveNext<cr>",
