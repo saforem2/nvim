@@ -3,8 +3,9 @@ return {
   { -- requires plugins in lua/plugins/treesitter.lua and lua/plugins/lsp.lua
     -- for complete functionality (language features)
     'quarto-dev/quarto-nvim',
-    ft = { 'quarto' },
+    ft = { 'quarto', "markdown", "qmd" },
     dev = false,
+    enabled = true,
     opts = {
       lspFeatures = {
         languages = { 'r', 'python', 'julia', 'bash', 'lua', 'html', 'dot', 'javascript', 'typescript', 'ojs' },
@@ -18,7 +19,43 @@ return {
       -- for language features in code cells
       -- configured in lua/plugins/lsp.lua and
       -- added as a nvim-cmp source in lua/plugins/completion.lua
-      'jmbuhr/otter.nvim',
+      -- 'jmbuhr/otter.nvim',
+      {
+        "jmbuhr/otter.nvim",
+        dev = false,
+        enabled = true,
+        opts = {
+          lsp = {
+            hover = {
+              border = require('style').border
+            }
+          }
+        }
+      },
+      {
+        'quarto-dev/quarto-vim',
+        -- ft = 'quarto',
+        ft = { "quarto", "markdown", "qmd" },
+        dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
+        -- note: needs additional syntax highlighting enabled for markdown
+        -- in `nvim-treesitter`
+        config = function()
+          -- conceal can be tricky because both
+          -- the treesitter highlighting and the
+          -- regex vim syntax files can define conceal
+          -- s
+          -- see `:h conceallevel`
+          vim.opt.conceallevel = 0
+          -- -- disable conceal in markdown/quarto
+          vim.g['pandoc#syntax#conceal#use'] = true
+          -- -- embeds are already handled by treesitter injectons
+          vim.g['pandoc#syntax#codeblocks#embeds#use'] = true
+          vim.g['pandoc#syntax#conceal#blacklist'] = { 'codeblock_delim', 'codeblock_start' }
+          -- but allow some types of conceal in math regions:
+          -- see `:h g:tex_conceal`
+          vim.g['tex_conceal'] = 'gm'
+        end
+      },
     },
   },
 

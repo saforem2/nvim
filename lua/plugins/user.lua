@@ -10,11 +10,11 @@ return {
   --   end,
   -- },
 
+  { "saforem2/glitz", lazy = false, enabled = true},
   { "LunarVim/bigfile.nvim" },
   { "p00f/nvim-ts-rainbow" },
   { "dstein64/vim-startuptime" },
   { "rktjmp/shipwright.nvim" },
-  { "saforem2/glitz", lazy = true },
   { "NTBBloodbath/doom-one.nvim" },
   { "navarasu/onedark.nvim" },
   { "marko-cerovac/material.nvim" },
@@ -74,36 +74,6 @@ return {
       'nvim-lua/plenary.nvim',
     },
   },
-
-    { -- highlight markdown headings and code blocks etc.
-    'lukas-reineke/headlines.nvim',
-    enabled = false,
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    config = function()
-      require('headlines').setup {
-        quarto = {
-          query = vim.treesitter.query.parse(
-            'markdown',
-            [[
-                (fenced_code_block) @codeblock
-                ]]
-          ),
-          codeblock_highlight = 'CodeBlock',
-          treesitter_language = 'markdown',
-        },
-        markdown = {
-          query = vim.treesitter.query.parse(
-            'markdown',
-            [[
-                (fenced_code_block) @codeblock
-                ]]
-          ),
-          codeblock_highlight = 'CodeBlock',
-        },
-      }
-    end,
-  },
-
 
   {
     "nacro90/numb.nvim",
@@ -232,11 +202,13 @@ return {
       }
     end,
   },
+
   {
     "turbio/bracey.vim",
     cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
     run = "npm install --prefix server",
   },
+
   {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
@@ -333,6 +305,39 @@ return {
       vim.g["codestats_api_key"] = { os.getenv "CODESTATS_API_KEY" }
       -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
     end,
+  },
+
+  -- color html colors
+  {
+    'NvChad/nvim-colorizer.lua',
+    enabled = true,
+    opts = {
+      filetypes = { '*' },
+      user_default_options = {
+        RGB = true, -- #RGB hex codes
+        RRGGBB = true, -- #RRGGBB hex codes
+        names = true, -- "Name" codes like Blue or blue
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+        AARRGGBB = false, -- 0xAARRGGBB hex codes
+        rgb_fn = false, -- CSS rgb() and rgba() functions
+        hsl_fn = false, -- CSS hsl() and hsla() functions
+        css = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+        css_fn = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+        -- Available modes for `mode`: foreground, background,  virtualtext
+        mode = 'background', -- Set the display mode.
+        -- Available methods are false / true / "normal" / "lsp" / "both"
+        -- True is same as normal
+        tailwind = false, -- Enable tailwind colors
+        -- parsers can contain values used in |user_default_options|
+        sass = { enable = false, parsers = { 'css' } }, -- Enable sass colors
+        virtualtext = '■',
+        -- update color values even if buffer is not focused
+        -- example use: cmp_menu, cmp_docs
+        always_update = false,
+        -- all the sub-options of filetypes apply to buftypes
+      },
+      buftypes = {},
+    },
   },
 
   -- {

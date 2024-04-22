@@ -25,6 +25,8 @@ return {
     },
   },
 
+  { "WhoIsSethDaniel/mason-tool-installer.nvim" },
+
   {
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -34,7 +36,7 @@ return {
       { -- nice loading notifications
         -- PERF: but can slow down startup
         'j-hui/fidget.nvim',
-        enabled = false,
+        enabled = true,
         opts = {},
       },
       { 'folke/neodev.nvim', opts = {}, enabled = true },
@@ -109,17 +111,17 @@ return {
         root_dir = util.root_pattern('.git', '.marksman.toml', '_quarto.yml'),
       }
 
-      lspconfig.r_language_server.setup {
-        capabilities = capabilities,
-        flags = lsp_flags,
-        settings = {
-          r = {
-            lsp = {
-              rich_documentation = false,
-            },
-          },
-        },
-      }
+      -- lspconfig.r_language_server.setup {
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   settings = {
+      --     r = {
+      --       lsp = {
+      --         rich_documentation = false,
+      --       },
+      --     },
+      --   },
+      -- }
 
       lspconfig.cssls.setup {
         capabilities = capabilities,
