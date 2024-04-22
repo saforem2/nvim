@@ -1,4 +1,5 @@
 return {
+  { "vim-pandoc/vim-pandoc-syntax" },
 
   { -- requires plugins in lua/plugins/treesitter.lua and lua/plugins/lsp.lua
     -- for complete functionality (language features)
@@ -8,7 +9,21 @@ return {
     enabled = true,
     opts = {
       lspFeatures = {
+        enabled = true,
+        diagnostics = {
+          enabled = true,
+          triggers = { "BufWritePost" },
+        },
+        completion = {
+          enabled = true,
+        },
         languages = { 'r', 'python', 'julia', 'bash', 'lua', 'html', 'dot', 'javascript', 'typescript', 'ojs' },
+      },
+      keymap = {
+        hover = 'K',
+        definition = 'gd',
+        rename = '<leader>lR',
+        references = 'gr',
       },
       codeRunner = {
         enabled = true,
@@ -34,6 +49,7 @@ return {
       },
       {
         'quarto-dev/quarto-vim',
+        enabled = true,
         -- ft = 'quarto',
         ft = { "quarto", "markdown", "qmd" },
         dependencies = { 'vim-pandoc/vim-pandoc-syntax' },

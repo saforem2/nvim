@@ -50,7 +50,6 @@ return {
   { "folke/lsp-colors.nvim", event = "BufRead" },
   { "felipec/vim-sanegx" },
   { "godlygeek/tabular" },
-  { "preservim/vim-markdown" },
   { "brenoprata10/nvim-highlight-colors" },
   { "nvim-telescope/telescope-file-browser.nvim" },
   { "rrethy/vim-illuminate" },
@@ -62,10 +61,15 @@ return {
   { "rktjmp/lush.nvim" },
   { "bfredl/nvim-ipy" },
   { "lvimuser/lsp-inlayhints.nvim" },
-  { "preservim/vim-markdown" },
   { "HiPhish/nvim-ts-rainbow2" },
   { "vim-pandoc/vim-pandoc-syntax" },
   { "ggandor/lightspeed.nvim", event = "BufRead" },
+
+  {
+    "preservim/vim-markdown",
+    branch = "master",
+    dependencies = { "godlygeek/tabular" },
+  },
 
   { -- interactive global search and replace
     'nvim-pack/nvim-spectre',

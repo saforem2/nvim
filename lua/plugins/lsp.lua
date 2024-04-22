@@ -25,14 +25,14 @@ return {
     },
   },
 
-  { "WhoIsSethDaniel/mason-tool-installer.nvim" },
+  -- { "WhoIsSethDaniel/mason-tool-installer.nvim", lazy = false },
 
   {
     'neovim/nvim-lspconfig',
     dependencies = {
       { 'williamboman/mason.nvim' },
       { 'williamboman/mason-lspconfig.nvim' },
-      { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+      -- { 'WhoIsSethDaniel/mason-tool-installer.nvim', enabled = true, opts = {} },
       { -- nice loading notifications
         -- PERF: but can slow down startup
         'j-hui/fidget.nvim',
@@ -50,15 +50,15 @@ return {
       require('mason-lspconfig').setup {
         automatic_installation = true,
       }
-      require('mason-tool-installer').setup {
-        ensure_installed = {
-          'black',
-          'stylua',
-          'shfmt',
-          'isort',
-          'tree-sitter-cli',
-        },
-      }
+      -- require('mason-tool-installer').setup {
+      --   ensure_installed = {
+      --     'black',
+      --     'stylua',
+      --     'shfmt',
+      --     'isort',
+      --     'tree-sitter-cli',
+      --   },
+      -- }
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
