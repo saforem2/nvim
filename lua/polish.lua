@@ -1,6 +1,9 @@
 -- if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
---
-vim.cmd [[colorscheme glitz]]
+
+vim.o.termguicolors = true
+-- vim.cmd [[colorscheme glitz]]
+-- vim.api.nvim_eval "set rtp+=~/.config/nvim/after/colors/"
+vim.cmd [[colorscheme sam_molokai]]
 
 -- This will run last in the setup process and is a good place to configure
 -- things like custom filetypes. This just pure lua so anything that doesn't

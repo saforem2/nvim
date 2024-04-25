@@ -11,15 +11,19 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "glitz",
+    -- colorscheme = "sam_molokai",
+    highlights = require("lua.highlights.init"),
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-    highlights = {
+    -- highlights = {
+    --   require("notify").setup({
+    --     background_colour = "#222222",
+    --   }),
       -- require('highlights')
       -- init = {      },
 
       -- astrotheme = ,
 
-    },
+    -- },
     -- Icons can be configured throughout the interface
     icons = {
       -- configure the loading of the lsp in the status line
