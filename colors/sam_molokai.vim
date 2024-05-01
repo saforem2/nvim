@@ -190,8 +190,8 @@ hi String          guifg=#ffff00 gui=italic
 hi Conditional     guifg=#F92672               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
 hi Conceal		   guibg=NONE	 guifg=#cfcfc2 gui=NONE
-" hi Cursor          guifg=#000000 guibg=#ffffff
-hi iCursor         guifg=#000000 guibg=#ffffff
+" hi Cursor          guifg=#000000 guibg=#222222
+hi iCursor         guifg=#000000 guibg=#222222
 hi CursorColumn                  guibg=#252525
 hi IndentGuidesOdd guifg=#494949
 hi IndentGuidesEven guifg=#3E3D32
@@ -707,139 +707,139 @@ hi DevIconPy guifg=#40c057
 " #F8F8F2
 "
 
-hi lualine_x_visual  guibg=#ffffff
-hi lualine_x_terminal  guibg=#ffffff
+hi lualine_x_visual  guibg=#222222
+hi lualine_x_terminal  guibg=#222222
 hi lualine_c_insert guifg=#ffffff guibg=#ffff00
 hi lualine_c_visual guifg=#ffffff guibg=#ffff00
 hi lualine_c_replace guifg=#ffffff guibg=#ffff00
 hi lualine_c_command guifg=#ffffff guibg=#ffff00
 hi lualine_c_terminal guifg=#ffffff guibg=#ffff00
 hi lualine_c_normal guifg=#ffffff guibg=#1e1e1e
-hi lualine_x_inactive  guibg=#ffffff
-hi lualine_x_command  guibg=#ffffff
-hi lualine_x_replace  guibg=#ffffff
-hi lualine_x_insert  guibg=#ffffff
-hi lualine_x_normal  guibg=#ffffff
+hi lualine_x_inactive  guibg=#222222
+hi lualine_x_command  guibg=#222222
+hi lualine_x_replace  guibg=#222222
+hi lualine_x_insert  guibg=#222222
+hi lualine_x_normal  guibg=#222222
 
-hi lualine_c_16_normal  guibg=#ffffff
-hi lualine_c_16_insert  guibg=#ffffff
-hi lualine_c_16_visual  guibg=#ffffff
-hi lualine_c_16_replace  guibg=#ffffff
-hi lualine_c_16_command  guibg=#ffffff
-hi lualine_c_16_terminal  guibg=#ffffff
-hi lualine_c_16_inactive  guibg=#ffffff
+hi lualine_c_16_normal  guibg=#222222
+hi lualine_c_16_insert  guibg=#222222
+hi lualine_c_16_visual  guibg=#222222
+hi lualine_c_16_replace  guibg=#222222
+hi lualine_c_16_command  guibg=#222222
+hi lualine_c_16_terminal  guibg=#222222
+hi lualine_c_16_inactive  guibg=#222222
 
-hi lualine_c_17_normal  guibg=#ffffff
-hi lualine_c_17_insert  guibg=#ffffff
-hi lualine_c_17_visual  guibg=#ffffff
-hi lualine_c_17_replace  guibg=#ffffff
-hi lualine_c_17_command  guibg=#ffffff
-hi lualine_c_17_terminal  guibg=#ffffff
-hi lualine_c_17_inactive  guibg=#ffffff
+hi lualine_c_17_normal  guibg=#222222
+hi lualine_c_17_insert  guibg=#222222
+hi lualine_c_17_visual  guibg=#222222
+hi lualine_c_17_replace  guibg=#222222
+hi lualine_c_17_command  guibg=#222222
+hi lualine_c_17_terminal  guibg=#222222
+hi lualine_c_17_inactive  guibg=#222222
 
-hi lualine_c_24_normal  guibg=#ffffff
-hi lualine_c_24_insert  guibg=#ffffff
-hi lualine_c_24_visual  guibg=#ffffff
-hi lualine_c_24_replace  guibg=#ffffff
-hi lualine_c_24_command  guibg=#ffffff
-hi lualine_c_24_terminal  guibg=#ffffff
-hi lualine_c_24_inactive  guibg=#ffffff
+hi lualine_c_24_normal  guibg=#222222
+hi lualine_c_24_insert  guibg=#222222
+hi lualine_c_24_visual  guibg=#222222
+hi lualine_c_24_replace  guibg=#222222
+hi lualine_c_24_command  guibg=#222222
+hi lualine_c_24_terminal  guibg=#222222
+hi lualine_c_24_inactive  guibg=#222222
 
-hi lualine_x_25_normal  guibg=#ffffff
-hi lualine_x_25_insert  guibg=#ffffff
-hi lualine_x_25_visual  guibg=#ffffff
-hi lualine_x_25_replace  guibg=#ffffff
-hi lualine_x_25_command  guibg=#ffffff
-hi lualine_x_25_terminal  guibg=#ffffff
-hi lualine_x_25_inactive  guibg=#ffffff
+hi lualine_x_25_normal  guibg=#222222
+hi lualine_x_25_insert  guibg=#222222
+hi lualine_x_25_visual  guibg=#222222
+hi lualine_x_25_replace  guibg=#222222
+hi lualine_x_25_command  guibg=#222222
+hi lualine_x_25_terminal  guibg=#222222
+hi lualine_x_25_inactive  guibg=#222222
 
-hi lualine_x_29_normal  guibg=#ffffff
-hi lualine_x_29_insert  guibg=#ffffff
-hi lualine_x_29_visual  guibg=#ffffff
-hi lualine_x_29_replace  guibg=#ffffff
-hi lualine_x_29_command  guibg=#ffffff
-hi lualine_x_29_terminal  guibg=#ffffff
-hi lualine_x_29_inactive  guibg=#ffffff
+hi lualine_x_29_normal  guibg=#222222
+hi lualine_x_29_insert  guibg=#222222
+hi lualine_x_29_visual  guibg=#222222
+hi lualine_x_29_replace  guibg=#222222
+hi lualine_x_29_command  guibg=#222222
+hi lualine_x_29_terminal  guibg=#222222
+hi lualine_x_29_inactive  guibg=#222222
 
-hi lualine_c_diff_added_normal guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_insert guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_visual guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_replace guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_command guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_terminal guifg=#98be65 guibg=#ffffff
-hi lualine_c_diff_added_inactive guifg=#98be65 guibg=#ffffff
+hi lualine_c_diff_added_normal guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_insert guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_visual guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_replace guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_command guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_terminal guifg=#98be65 guibg=#222222
+hi lualine_c_diff_added_inactive guifg=#98be65 guibg=#222222
 
-hi lualine_c_diff_modified_normal guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_insert guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_visual guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_replace guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_command guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_terminal guifg=#FFEE58 guibg=#ffffff
-hi lualine_c_diff_modified_inactive guifg=#FFEE58 guibg=#ffffff
+hi lualine_c_diff_modified_normal guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_insert guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_visual guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_replace guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_command guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_terminal guifg=#FFEE58 guibg=#222222
+hi lualine_c_diff_modified_inactive guifg=#FFEE58 guibg=#222222
 
-hi lualine_c_diff_removed_normal guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_insert guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_visual guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_replace guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_command guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_terminal guifg=#EF5350 guibg=#ffffff
-hi lualine_c_diff_removed_inactive guifg=#EF5350 guibg=#ffffff
+hi lualine_c_diff_removed_normal guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_insert guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_visual guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_replace guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_command guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_terminal guifg=#EF5350 guibg=#222222
+hi lualine_c_diff_removed_inactive guifg=#EF5350 guibg=#222222
 
-hi lualine_c_31_normal guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_insert guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_visual guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_replace guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_command guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_terminal guifg=#66BB6A guibg=#ffffff
-hi lualine_c_31_inactive guifg=#66BB6A guibg=#ffffff
+hi lualine_c_31_normal guifg=#66BB6A guibg=#222222
+hi lualine_c_31_insert guifg=#66BB6A guibg=#222222
+hi lualine_c_31_visual guifg=#66BB6A guibg=#222222
+hi lualine_c_31_replace guifg=#66BB6A guibg=#222222
+hi lualine_c_31_command guifg=#66BB6A guibg=#222222
+hi lualine_c_31_terminal guifg=#66BB6A guibg=#222222
+hi lualine_c_31_inactive guifg=#66BB6A guibg=#222222
 
-hi lualine_x_diagnostics_error_normal guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_insert guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_visual guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_replace guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_command guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_terminal guifg=#ff0000 guibg=#ffffff
-hi lualine_x_diagnostics_error_inactive guifg=#ff0000 guibg=#ffffff
+hi lualine_x_diagnostics_error_normal guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_insert guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_visual guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_replace guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_command guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_terminal guifg=#ff0000 guibg=#222222
+hi lualine_x_diagnostics_error_inactive guifg=#ff0000 guibg=#222222
 
-hi lualine_x_diagnostics_warn_normal guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_insert guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_visual guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_replace guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_command guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_terminal guifg=#FFA726 guibg=#ffffff
-hi lualine_x_diagnostics_warn_inactive guifg=#FFA726 guibg=#ffffff
+hi lualine_x_diagnostics_warn_normal guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_insert guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_visual guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_replace guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_command guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_terminal guifg=#FFA726 guibg=#222222
+hi lualine_x_diagnostics_warn_inactive guifg=#FFA726 guibg=#222222
 
-hi lualine_x_diagnostics_info_normal guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_insert guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_visual guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_replace guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_command guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_terminal guifg=#29B6F6 guibg=#ffffff
-hi lualine_x_diagnostics_info_inactive guifg=#29B6F6 guibg=#ffffff
+hi lualine_x_diagnostics_info_normal guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_insert guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_visual guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_replace guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_command guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_terminal guifg=#29B6F6 guibg=#222222
+hi lualine_x_diagnostics_info_inactive guifg=#29B6F6 guibg=#222222
 
-hi lualine_x_diagnostics_hint_normal guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_insert guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_visual guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_replace guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_command guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_terminal guifg=#ffff00 guibg=#ffffff
-hi lualine_x_diagnostics_hint_inactive guifg=#ffff00 guibg=#ffffff
+hi lualine_x_diagnostics_hint_normal guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_insert guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_visual guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_replace guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_command guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_terminal guifg=#ffff00 guibg=#222222
+hi lualine_x_diagnostics_hint_inactive guifg=#ffff00 guibg=#222222
 
-hi lualine_x_33_normal guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_insert guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_visual guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_replace guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_command guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_terminal guifg=#66BB6A guibg=#ffffff
-hi lualine_x_33_inactive guifg=#66BB6A guibg=#ffffff
+hi lualine_x_33_normal guifg=#66BB6A guibg=#222222
+hi lualine_x_33_insert guifg=#66BB6A guibg=#222222
+hi lualine_x_33_visual guifg=#66BB6A guibg=#222222
+hi lualine_x_33_replace guifg=#66BB6A guibg=#222222
+hi lualine_x_33_command guifg=#66BB6A guibg=#222222
+hi lualine_x_33_terminal guifg=#66BB6A guibg=#222222
+hi lualine_x_33_inactive guifg=#66BB6A guibg=#222222
 
-hi lualine_x_34_normal gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_insert gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_visual gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_replace gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_command gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_terminal gui=bold guifg=#ffffff guibg=#ffffff
-hi lualine_x_34_inactive gui=bold guifg=#ffffff guibg=#ffffff
+hi lualine_x_34_normal gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_insert gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_visual gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_replace gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_command gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_terminal gui=bold guifg=#ffffff guibg=#222222
+hi lualine_x_34_inactive gui=bold guifg=#ffffff guibg=#222222
 
 
 hi lualine_a_normal guibg=#FFF
@@ -848,29 +848,29 @@ hi lualine_c_normal guibg=#FFF
 hi lualine_x_normal guibg=#FFF
 hi lualine_x_normal guibg=#FFF
 
-hi lualine_c_replace guifg=#ffffff guibg=#ffffff
+hi lualine_c_replace guifg=#ffffff guibg=#222222
 hi lualine_a_replace gui=bold guifg=#1e1e1e guibg=#ff008c
 hi lualine_b_replace guifg=#ff008c guibg=#1e1e1e
-hi lualine_c_visual guifg=#ffffff guibg=#ffffff
+hi lualine_c_visual guifg=#ffffff guibg=#222222
 hi lualine_a_visual gui=bold guifg=#1e1e1e guibg=#4a97ff
 hi lualine_b_visual guifg=#4a97ff guibg=#1e1e1e
-hi lualine_c_insert guifg=#ffffff guibg=#ffffff
+hi lualine_c_insert guifg=#ffffff guibg=#222222
 hi lualine_a_insert gui=bold guifg=#1e1e1e guibg=#ffff00
 hi lualine_b_insert guifg=#ffff00 guibg=#1e1e1e
 
-hi lualine_c_inactive guifg=#ffffff guibg=#ffffff
+hi lualine_c_inactive guifg=#ffffff guibg=#222222
 hi lualine_a_inactive gui=bold guifg=#969696 guibg=#464646
 hi lualine_b_inactive guifg=#6e6e6e guibg=#1e1e1e
 
-hi lualine_c_terminal guifg=#ffffff guibg=#ffffff
+hi lualine_c_terminal guifg=#ffffff guibg=#222222
 hi lualine_a_terminal gui=bold guifg=#1e1e1e guibg=#ff468d
 hi lualine_b_terminal guifg=#ff468d guibg=#1e1e1e
 
-hi lualine_c_command guifg=#ffffff guibg=#ffffff
+hi lualine_c_command guifg=#ffffff guibg=#222222
 hi lualine_a_command gui=bold guifg=#1e1e1e guibg=#ff468d
 hi lualine_b_command guifg=#ff468d guibg=#1e1e1e
 
-hi lualine_c_normal guifg=#ffffff guibg=#ffffff
+hi lualine_c_normal guifg=#ffffff guibg=#222222
 
 
 " hi rainbowcol1  guifg=#BDBDBD
