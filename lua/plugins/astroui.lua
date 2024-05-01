@@ -14,6 +14,7 @@ return {
     colorscheme = "glitz",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
+      require("highlights.init"),
       -- require('highlights')
       -- init = {      },
 
