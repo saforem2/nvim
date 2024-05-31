@@ -11,8 +11,8 @@ return {
   -- },
 
   { "lukas-reineke/onedark.nvim", enabled = true },
-  { "saforem2/glitz", lazy = false, enabled = true},
-  -- { dir = "/home/samforeman/projects/saforem2/glitz", lazy = false, enabled = true},
+  -- { "saforem2/glitz", lazy = false, enabled = true},
+  -- { dir = "/home/samforeman/projects/saforem2/glitz", lazy = false, enabled = true },
   { "LunarVim/bigfile.nvim" },
   { "p00f/nvim-ts-rainbow" },
   { "dstein64/vim-startuptime" },
@@ -27,7 +27,7 @@ return {
   { "bluz71/vim-nightfly-guicolors" },
   { "rafamadriz/neon" },
   { "sainnhe/sonokai" },
-  { "yonlu/omni.vim" },
+  { "yonlu/omni.vim" , lazy=false },
   { "lukas-reinke/indent-blankline.nvim", enabled = false },
   { "wakatime/vim-wakatime" },
   { "mbbill/undotree" },
@@ -38,7 +38,6 @@ return {
   { "Vimjas/vim-python-pep8-indent" },
   { "rafcamlet/nvim-luapad" },
   { "tpope/vim-repeat" },
-  { "kreskij/Repeatable.vim" },
   { "easymotion/vim-easymotion" },
   { "lervag/vimtex" },
   { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
@@ -64,20 +63,21 @@ return {
   { "bfredl/nvim-ipy" },
   -- { "lvimuser/lsp-inlayhints.nvim" },
   { "HiPhish/nvim-ts-rainbow2" },
+  { "vim-pandoc/vim-pandoc" },
   { "vim-pandoc/vim-pandoc-syntax" },
   { "ggandor/lightspeed.nvim", event = "BufRead" },
-
   {
     "preservim/vim-markdown",
-    branch = "master",
     dependencies = { "godlygeek/tabular" },
+    config = function()
+    end,
   },
 
   { -- interactive global search and replace
-    'nvim-pack/nvim-spectre',
-    cmd = { 'Spectre' },
+    "nvim-pack/nvim-spectre",
+    cmd = { "Spectre" },
     dependencies = {
-      'nvim-lua/plenary.nvim',
+      "nvim-lua/plenary.nvim",
     },
   },
 
@@ -155,43 +155,46 @@ return {
     "dccsillag/magma-nvim",
     run = ":UpdateRemotePlugins",
   },
-  {
-    "hoschi/yode-nvim",
-    config = function() require("yode-nvim").setup {} end,
-  },
+
+  -- {
+  --   "hoschi/yode-nvim",
+  --   config = function() require("yode-nvim").setup {} end,
+  -- },
+
   {
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   },
-  {
-    "kdheepak/tabline.nvim",
-    config = function()
-      require("tabline").setup {
-        -- Defaults configuration options
-        enable = true,
-        options = {
-          -- If lualine is installed tabline will use separators configured in lualine by default.
-          -- These options can be used to override those settings.
-          -- section_separators = { '', '' },
-          -- component_separators = { '', '' },
-          max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
-          show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
-          show_devicons = true, -- this shows devicons in buffer section
-          show_bufnr = false, -- this appends [bufnr] to buffer section,
-          show_filename_only = true, -- shows base filename only instead of relative path in filename
-          -- modified_icon = "+ ", -- change the default modified icon
-          modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-          show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
-        },
-      }
-    end,
-  },
+
+  -- {
+  --   "kdheepak/tabline.nvim",
+  --   config = function()
+  --     require("tabline").setup {
+  --       -- Defaults configuration options
+  --       enable = true,
+  --       options = {
+  --         -- If lualine is installed tabline will use separators configured in lualine by default.
+  --         -- These options can be used to override those settings.
+  --         -- section_separators = { '', '' },
+  --         -- component_separators = { '', '' },
+  --         max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
+  --         show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
+  --         show_devicons = true, -- this shows devicons in buffer section
+  --         show_bufnr = false, -- this appends [bufnr] to buffer section,
+  --         show_filename_only = true, -- shows base filename only instead of relative path in filename
+  --         -- modified_icon = "+ ", -- change the default modified icon
+  --         modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
+  --         show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
+  --       },
+  --     }
+  --   end,
+  -- },
 
   {
     "romgrk/nvim-treesitter-context",
     config = function()
       require("treesitter-context").setup {
-        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
         patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
@@ -260,11 +263,11 @@ return {
       })
     end,
   },
-  {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "make",
-    lazy = false,
-  },
+  -- {
+  --   "nvim-telescope/telescope-fzf-native.nvim",
+  --   run = "make",
+  --   lazy = false,
+  -- },
   {
     "quarto-dev/quarto-nvim",
     requires = {
@@ -315,10 +318,10 @@ return {
 
   -- color html colors
   {
-    'NvChad/nvim-colorizer.lua',
+    "NvChad/nvim-colorizer.lua",
     enabled = true,
     opts = {
-      filetypes = { '*' },
+      filetypes = { "*" },
       user_default_options = {
         RGB = true, -- #RGB hex codes
         RRGGBB = true, -- #RRGGBB hex codes
@@ -330,13 +333,13 @@ return {
         css = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
         css_fn = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
         -- Available modes for `mode`: foreground, background,  virtualtext
-        mode = 'background', -- Set the display mode.
+        mode = "background", -- Set the display mode.
         -- Available methods are false / true / "normal" / "lsp" / "both"
         -- True is same as normal
         tailwind = false, -- Enable tailwind colors
         -- parsers can contain values used in |user_default_options|
-        sass = { enable = false, parsers = { 'css' } }, -- Enable sass colors
-        virtualtext = '■',
+        sass = { enable = false, parsers = { "css" } }, -- Enable sass colors
+        virtualtext = "■",
         -- update color values even if buffer is not focused
         -- example use: cmp_menu, cmp_docs
         always_update = false,
@@ -549,7 +552,6 @@ return {
   --     }
   --   end,
   -- },
-  {},
   -- {
   --   "luk400/vim-jukit",
   --   config = function()
@@ -568,5 +570,4 @@ return {
   --   require('wf').setup()
   --   end
   -- }
-
 }

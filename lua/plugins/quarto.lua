@@ -49,8 +49,9 @@ return {
       },
       {
         'quarto-dev/quarto-vim',
-        enabled = true,
+        -- enabled = true,
         -- ft = 'quarto',
+        lazy = false,
         ft = { "quarto", "markdown", "qmd" },
         dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
         -- note: needs additional syntax highlighting enabled for markdown
