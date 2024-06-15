@@ -42,7 +42,6 @@ return {
   { "lervag/vimtex" },
   { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
   { "folke/trouble.nvim", cmd = "TroubleToggle" },
-  { "npxbr/glow.nvim", ft = { "markdown", "quarto" } },
   { "chaoren/vim-wordmotion" },
   { "jbyuki/nabla.nvim" },
   { "knubie/vim-kitty-navigator" },
@@ -62,16 +61,53 @@ return {
   { "rktjmp/lush.nvim" },
   { "bfredl/nvim-ipy" },
   -- { "lvimuser/lsp-inlayhints.nvim" },
-  { "HiPhish/nvim-ts-rainbow2" },
-  { "vim-pandoc/vim-pandoc" },
-  { "vim-pandoc/vim-pandoc-syntax" },
   { "ggandor/lightspeed.nvim", event = "BufRead" },
+  { "HiPhish/nvim-ts-rainbow2" },
+  -- { "vim-pandoc/vim-pandoc" },
+  -- { "vim-pandoc/vim-pandoc-syntax" },
+  { "npxbr/glow.nvim", ft = { "markdown", "quarto" } },
+
+  {
+    'mrjones2014/legendary.nvim',
+    -- since legendary.nvim handles all your keymaps/commands,
+    -- its recommended to load legendary.nvim before other plugins
+    priority = 10000,
+    lazy = false,
+    -- sqlite is only needed if you want to use frecency sorting
+    -- dependencies = { 'kkharji/sqlite.lua' }
+  },
+
   {
     "preservim/vim-markdown",
     dependencies = { "godlygeek/tabular" },
     config = function()
     end,
   },
+  { -- install without yarn or npm
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      {
+        "tadmccorkle/markdown.nvim",
+        event = "VeryLazy",
+        config = function()
+          require('markdown').setup({})
+        end,
+      }
+
+    },
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  },
+
 
   { -- interactive global search and replace
     "nvim-pack/nvim-spectre",
@@ -160,11 +196,6 @@ return {
   --   "hoschi/yode-nvim",
   --   config = function() require("yode-nvim").setup {} end,
   -- },
-
-  {
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  },
 
   -- {
   --   "kdheepak/tabline.nvim",
