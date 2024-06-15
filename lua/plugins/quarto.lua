@@ -1,5 +1,5 @@
 return {
-  { "vim-pandoc/vim-pandoc-syntax" },
+  -- { "vim-pandoc/vim-pandoc-syntax" },
 
   { -- requires plugins in lua/plugins/treesitter.lua and lua/plugins/lsp.lua
     -- for complete functionality (language features)
