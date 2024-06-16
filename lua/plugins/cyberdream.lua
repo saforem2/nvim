@@ -28,6 +28,7 @@ return {
                         -- Example:
                         -- Comment = { fg = "#696969", bg = "NONE", italic = true },
                         Normal = { fg = "#cccccc" },
+                        -- sym"@variable" = { fg = ""},
 
                         -- Complete list can be found in `lua/cyberdream/theme.lua`
                     },
@@ -37,6 +38,9 @@ return {
                         -- Example:
                         return {
                             Comment = { italic = true },
+                            ["@variable"] = { fg="#cccccc" },
+                            ["@variable.member"] = { fg="#FA99CD" },
+                            ["@Identifier"] = { fg = "#65d8ee", bold = true },
                             -- ["@property"] = { fg = colors.blue, bold = true },
                         }
                     end,
