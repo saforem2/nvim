@@ -28,6 +28,7 @@ return {
                         -- Example:
                         -- Comment = { fg = "#696969", bg = "NONE", italic = true },
                         Normal = { fg = "#cccccc" },
+                        Keyword = { fg = "#ffa94d" },
 
                         -- Complete list can be found in `lua/cyberdream/theme.lua`
                     },
