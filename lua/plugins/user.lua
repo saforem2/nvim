@@ -9,7 +9,16 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-
+  {
+    'mrjones2014/legendary.nvim',
+    -- since legendary.nvim handles all your keymaps/commands,
+    -- its recommended to load legendary.nvim before other plugins
+    priority = 10000,
+    lazy = false,
+    -- sqlite is only needed if you want to use frecency sorting
+    -- dependencies = { 'kkharji/sqlite.lua' }
+  },
+  { "ojroques/nvim-osc52" },
   { "lukas-reineke/onedark.nvim", name="lukas-onedark", lazy=false, enabled = true },
   { "saforem2/glitz", lazy = false, enabled = true},
   { "LunarVim/bigfile.nvim" },
@@ -65,16 +74,6 @@ return {
   -- { "lvimuser/lsp-inlayhints.nvim" },
   -- { "vim-pandoc/vim-pandoc" },
   -- { "vim-pandoc/vim-pandoc-syntax" },
-
-  {
-    'mrjones2014/legendary.nvim',
-    -- since legendary.nvim handles all your keymaps/commands,
-    -- its recommended to load legendary.nvim before other plugins
-    priority = 10000,
-    lazy = false,
-    -- sqlite is only needed if you want to use frecency sorting
-    -- dependencies = { 'kkharji/sqlite.lua' }
-  },
 
   {
     "preservim/vim-markdown",
@@ -320,10 +319,10 @@ return {
       }
     end,
   },
-  {
-    "mfussenegger/nvim-dap-python",
-    config = function() require("dap-python").setup "~/.virtualenvs/debugpy/bin/python" end,
-  },
+  -- {
+  --   "mfussenegger/nvim-dap-python",
+  --   config = function() require("dap-python").setup "~/.virtualenvs/debugpy/bin/python" end,
+  -- },
   {
     "Pocco81/HighStr.nvim",
     config = function()
@@ -388,7 +387,12 @@ return {
   },
   {
     "Exafunction/codeium.vim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
     config = function()
+      require("codeium").setup({})
       vim.g.codeium_disable_bindings = 1
       vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
       vim.keymap.set("i", "<c-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
