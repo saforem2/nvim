@@ -12,7 +12,20 @@ local opts = { noremap = true, silent = false }
 
 return {
     -- first key is the mode
+    v = {
+        ["<leader>c"] = {
+            require('osc52').copy_visual,
+        },
+    },
     n = {
+        ["<leader>c"] = {
+            require('osc52').copy_operator,
+            expr = true,
+        },
+        ["<leader>cc"] = {
+            "<leader>c_",
+            remap = true,
+        },
         ["<S-W"] = {
             "<cmd>HopWord<CR>",
             desc = "Hop Word",
