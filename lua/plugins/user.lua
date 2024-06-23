@@ -10,7 +10,7 @@ return {
   --   end,
   -- },
   {
-    'mrjones2014/legendary.nvim',
+    "mrjones2014/legendary.nvim",
     -- since legendary.nvim handles all your keymaps/commands,
     -- its recommended to load legendary.nvim before other plugins
     priority = 10000,
@@ -18,28 +18,55 @@ return {
     -- sqlite is only needed if you want to use frecency sorting
     -- dependencies = { 'kkharji/sqlite.lua' }
   },
-  { "ojroques/nvim-osc52" },
-  { "lukas-reineke/onedark.nvim", name="lukas-onedark", lazy=false, enabled = true },
-  { "saforem2/glitz", lazy = false, enabled = true},
-  { "LunarVim/bigfile.nvim" },
+  -- {
+  --   "ojroques/nvim-osc52"
+  -- },
+  -- return {
+  {
+    "ojroques/nvim-osc52",
+    keys = {
+      {
+        "<leader>y",
+        function() return require("osc52").copy_operator() end, -- <-- previously I wasn't using a return statement here
+        desc = "copy selection to system clipboard (normal mode)",
+        expr = true,
+      },
+      {
+        "<leader>Y",
+        "<leader>y_",
+        remap = true,
+        desc = "copy current line into system clipboard (normal mode)",
+      },
+      {
+        mode = "v",
+        "<leader>y",
+        function() require("osc52").copy_visual() end,
+        desc = "copy selection to system clipboard (visual mode)",
+      },
+    },
+  },
+  -- { "navarasu/onedark.nvim.git", name="navarasu-onedark", lazy = false },
+  { "saforem2/glitz", lazy = false, enabled = true },
   { "p00f/nvim-ts-rainbow" },
-  { "dstein64/vim-startuptime" },
-  { "rktjmp/shipwright.nvim" },
   { "NTBBloodbath/doom-one.nvim" },
-  { "navarasu/onedark.nvim", lazy=false, enabled=true },
   { "marko-cerovac/material.nvim" },
-  -- { "navarasu/onedark.nvim" },
   { "sainnhe/sonokai" },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "tanvirtin/monokai.nvim" },
-  { "bluz71/vim-nightfly-guicolors" },
-  { "rafamadriz/neon" },
-  { "sainnhe/sonokai" },
-  { "yonlu/omni.vim" , lazy=false },
-  { "lukas-reinke/indent-blankline.nvim", enabled = false },
+  { "yonlu/omni.vim", lazy = false },
+  -- { "LunarVim/bigfile.nvim" },
+  -- { "lukas-reineke/onedark.nvim", name="lukas-onedark", lazy=false, enabled = true },
+  -- { "dstein64/vim-startuptime" },
+  -- { "rktjmp/shipwright.nvim" },
+  -- { "navarasu/onedark.nvim", lazy=false, enabled=true },
+  -- { "navarasu/onedark.nvim" },
+  -- { "bluz71/vim-nightfly-guicolors" },
+  -- { "rafamadriz/neon" },
+  -- { "sainnhe/sonokai" },
+  -- { "lukas-reinke/indent-blankline.nvim", enabled = false },
   { "wakatime/vim-wakatime" },
   { "mbbill/undotree" },
-  { "kosayoda/nvim-lightbulb" },
+  -- { "kosayoda/nvim-lightbulb" },
   { "machakann/vim-sandwich" },
   { "rktjmp/lush.nvim" },
   { "vim-python/python-syntax" },
@@ -48,16 +75,16 @@ return {
   { "tpope/vim-repeat" },
   { "easymotion/vim-easymotion" },
   { "lervag/vimtex" },
-  { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
+  -- { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
   { "folke/trouble.nvim", cmd = "TroubleToggle" },
-  { "chaoren/vim-wordmotion" },
-  { "jbyuki/nabla.nvim" },
+  -- { "chaoren/vim-wordmotion" },
+  -- { "jbyuki/nabla.nvim" },
   { "knubie/vim-kitty-navigator" },
   { "fladson/vim-kitty" },
   { "jmbuhr/otter.nvim", opts = {} },
   { "folke/lsp-colors.nvim", event = "BufRead" },
-  { "felipec/vim-sanegx" },
-  { "godlygeek/tabular" },
+  -- { "felipec/vim-sanegx" },
+  -- { "godlygeek/tabular" },
   { "brenoprata10/nvim-highlight-colors" },
   { "nvim-telescope/telescope-file-browser.nvim" },
   { "rrethy/vim-illuminate" },
@@ -68,7 +95,11 @@ return {
   { "rktjmp/lush.nvim" },
   { "bfredl/nvim-ipy" },
   { "ggandor/lightspeed.nvim", event = "BufRead" },
-  { "HiPhish/nvim-ts-rainbow2" },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    config = function() require("rainbow-delimiters.setup").setup {} end,
+  },
+  -- { "HiPhish/nvim-ts-rainbow2" },
   { "npxbr/glow.nvim", ft = { "markdown", "quarto" } },
   -- { "preservim/vim-pencil" },
   -- { "lvimuser/lsp-inlayhints.nvim" },
@@ -78,8 +109,7 @@ return {
   {
     "preservim/vim-markdown",
     dependencies = { "godlygeek/tabular" },
-    config = function()
-    end,
+    config = function() end,
   },
   { -- install without yarn or npm
     "iamcco/markdown-preview.nvim",
@@ -97,17 +127,11 @@ return {
         "tadmccorkle/markdown.nvim",
         event = "VeryLazy",
         ft = { "markdown", "quarto" },
-        config = function()
-          require('markdown').setup({})
-        end,
-      }
-
+        -- config = function() require("markdown").setup {} end,
+      },
     },
-    config = function()
-      require('render-markdown').setup({})
-    end,
+    config = function() require("render-markdown").setup {} end,
   },
-
 
   { -- interactive global search and replace
     "nvim-pack/nvim-spectre",
@@ -300,7 +324,7 @@ return {
           info = { "DiagnosticInfo", "#2563EB" },
           hint = { "DiagnosticHint", "#10B981" },
           default = { "Identifier", "#7C3AED" },
-          test = { "Identifier", "#FF00FF" }
+          test = { "Identifier", "#FF00FF" },
         },
         search = {
           command = "rg",
@@ -387,18 +411,22 @@ return {
   },
   {
     "Exafunction/codeium.vim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
+    event = "BufEnter",
     config = function()
-      require("codeium").setup({})
-      vim.g.codeium_disable_bindings = 1
+      --   require("codeium").setup({})
+      --   vim.g.codeium_disable_bindings = 1
       vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
       vim.keymap.set("i", "<c-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
       vim.keymap.set("i", "<c-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
       vim.keymap.set("i", "<c-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
     end,
+    -- dependencies = {
+    --   "nvim-lua/plenary.nvim",
+    --   "hrsh7th/nvim-cmp",
+    -- },
+    -- lazy = false,
+    -- enabled = true,
+    -- config = function() require("codeium").setup {} end,
   },
   {
     -- "code-stats/code-stats-vim",

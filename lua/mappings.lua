@@ -12,16 +12,21 @@ local opts = { noremap = true, silent = false }
 
 return {
     -- first key is the mode
+    -- i = {
+    --     ["<C-g>"] = { 
+    --
+    --     }
+    -- }
     v = {
         ["<leader>c"] = {
-            require('osc52').copy_visual,
+            require('osc52').copy_visual(),
         },
     },
     n = {
-        ["<leader>c"] = {
-            require('osc52').copy_operator,
-            expr = true,
-        },
+        -- ["<leader>c"] = {
+        --     require('osc52').copy_operator(),
+        --     expr = true,
+        -- },
         ["<leader>cc"] = {
             "<leader>c_",
             remap = true,

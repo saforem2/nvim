@@ -2,7 +2,17 @@
 --
 -- vim.cmd [[colorscheme glitz]]
 vim.cmd [[ set conceallevel=2 ]]
-
+-- vim.g.clipboard = {
+--     name = 'OSC 52',
+--     copy = {
+--         ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+--         ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+--     },
+--     paste = {
+--         ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+--         ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+--     },
+-- }
 
 -- This will run last in the setup process and is a good place to configure
 -- things like custom filetypes. This just pure lua so anything that doesn't
