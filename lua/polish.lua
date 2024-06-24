@@ -1,7 +1,7 @@
 -- if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 --
 -- vim.cmd [[colorscheme glitz]]
-vim.cmd [[ set conceallevel=2 ]]
+vim.cmd [[ set conceallevel=0 ]]
 -- vim.g.clipboard = {
 --     name = 'OSC 52',
 --     copy = {
