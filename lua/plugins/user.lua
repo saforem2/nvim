@@ -106,6 +106,67 @@ return {
   -- { "vim-pandoc/vim-pandoc" },
   -- { "vim-pandoc/vim-pandoc-syntax" },
 
+  -- {
+  --   "jakewvincent/mkdnflow.nvim",
+  --   ft = { "markdown", "quarto" },
+  --   config = function()
+  --     require("mkdnflow").setup {
+  --       mappings = {
+  --         MkdnFoldSection = { "n", "<leader>k" },
+  --         MkdnUnfoldSection = { "n", "<leader>K" },
+  --       },
+  --       -- SAMPLE FOLDTEXT CONFIGURATION RECIPE WITH COMMENTS
+  --       -- Other config options
+  --       foldtext = {
+  --         title_transformer = function()
+  --           local function my_title_transformer(text)
+  --             local updated_title = text:gsub("%b{}", "")
+  --             updated_title = updated_title:gsub("^%s*", "")
+  --             updated_title = updated_title:gsub("%s*$", "")
+  --             updated_title = updated_title:gsub("^######", "░░░░░▓")
+  --             updated_title = updated_title:gsub("^#####", "░░░░▓▓")
+  --             updated_title = updated_title:gsub("^####", "░░░▓▓▓")
+  --             updated_title = updated_title:gsub("^###", "░░▓▓▓▓")
+  --             updated_title = updated_title:gsub("^##", "░▓▓▓▓▓")
+  --             updated_title = updated_title:gsub("^#", "▓▓▓▓▓▓")
+  --             return updated_title
+  --           end
+  --           return my_title_transformer
+  --         end,
+  --         object_count_icon_set = "nerdfont", -- Use/fall back on the nerdfont icon set
+  --         object_count_opts = function()
+  --           local opts = {
+  --             link = false, -- Prevent links from being counted
+  --             blockquote = { -- Count block quotes (these aren't counted by default)
+  --               icon = " ",
+  --               count_method = {
+  --                 pattern = { "^>.+$" },
+  --                 tally = "blocks",
+  --               },
+  --             },
+  --             fncblk = {
+  --               -- Override the icon for fenced code blocks with 
+  --               icon = " ",
+  --             },
+  --           }
+  --           return opts
+  --         end,
+  --         line_count = false, -- Prevent lines from being counted
+  --         word_count = true, -- Count the words in the section
+  --         fill_chars = {
+  --           left_edge = "╾─🖿 ─",
+  --           right_edge = "──╼",
+  --           item_separator = " · ",
+  --           section_separator = " // ",
+  --           left_inside = " ┝",
+  --           right_inside = "┥ ",
+  --           middle = "─",
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
+
   {
     "preservim/vim-markdown",
     dependencies = { "godlygeek/tabular" },
@@ -130,7 +191,18 @@ return {
         -- config = function() require("markdown").setup {} end,
       },
     },
-    config = function() require("render-markdown").setup {} end,
+    config = function()
+      require("render-markdown").setup {
+        win_options = {
+          conceallevel = {
+            -- Used when not being rendered, get user setting
+            default = vim.api.nvim_get_option_value("conceallevel", {}),
+            -- Used when being rendered, concealed text is completely hidden
+            rendered = 0,
+          },
+        },
+      }
+    end,
   },
 
   { -- interactive global search and replace
