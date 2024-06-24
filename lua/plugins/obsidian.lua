@@ -3,7 +3,7 @@ return {
     "epwalsh/obsidian.nvim",
     -- tag = "*",
     lazy = true,
-    ft = {"markdown", "quarto"},
+    ft = { "markdown", "quarto" },
     dependencies = {
       -- Required.
       "nvim-lua/plenary.nvim",
@@ -22,7 +22,7 @@ return {
             return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
           end,
           overrides = {
-            notes_subdir = vim.NIL,  -- have to use 'vim.NIL' instead of 'nil'
+            notes_subdir = vim.NIL, -- have to use 'vim.NIL' instead of 'nil'
             new_notes_location = "current_dir",
             templates = {
               subdir = vim.NIL,
@@ -39,8 +39,8 @@ return {
       -- Optional, configure additional syntax highlighting / extmarks.
       -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
       ui = {
-        enable = true,  -- set to false to disable all additional syntax features
-        update_debounce = 200,  -- update delay after a text change (in milliseconds)
+        enable = false, -- set to false to disable all additional syntax features
+        update_debounce = 200, -- update delay after a text change (in milliseconds)
         -- Define how various check-boxes are displayed
         checkboxes = {
           -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
