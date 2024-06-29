@@ -170,7 +170,14 @@ return {
   {
     "preservim/vim-markdown",
     dependencies = { "godlygeek/tabular" },
-    config = function() end,
+    config = function()
+      -- vim.cmd[[
+      --   autogroup markdownmappings
+      --     autocmd!
+      --     autocmd FileType markdown nmap <buffer> ]] <Plug>Markdown_MoveToNextHeader
+      --     autocmd FileType markdown nmap <buffer> [[ <Plug>Markdown_MoveToPreviousHeader
+      -- ]]
+    end,
   },
   { -- install without yarn or npm
     "iamcco/markdown-preview.nvim",
@@ -486,7 +493,7 @@ return {
     event = "BufEnter",
     config = function()
       --   require("codeium").setup({})
-      --   vim.g.codeium_disable_bindings = 1
+      vim.g.codeium_disable_bindings = 1
       vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
       vim.keymap.set("i", "<c-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
       vim.keymap.set("i", "<c-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
