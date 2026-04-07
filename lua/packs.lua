@@ -45,6 +45,8 @@ vim.pack.add({
   -- Colorschemes
   gh("scottmckendry/cyberdream.nvim"),
   gh("olimorris/onedarkpro.nvim"),
+  gh("marko-cerovac/material.nvim"),
+  gh("nyoom-engineering/oxocarbon.nvim"),
 
   -- Core dependencies
   gh("nvim-tree/nvim-web-devicons"),
@@ -73,7 +75,8 @@ vim.pack.add({
   gh("folke/noice.nvim"),
   gh("folke/which-key.nvim"),
   gh("folke/flash.nvim"),
-  gh("wsdjeg/picker.nvim"),
+  gh("ibhagwan/fzf-lua"),
+  gh("nvim-tree/nvim-tree.lua"),
 
   -- Editing
   gh("nvim-mini/mini.nvim"),
