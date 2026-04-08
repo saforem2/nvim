@@ -15,7 +15,11 @@ require("config.autocmds")
 vim.lsp.enable({
   "ty",
   "ruff",
+  "pyright",
   "luals",
   "ltex_plus",
+  "marksman",
+  "ast_grep",
+  "jsonls",
   "copilot-language-server",
 })
