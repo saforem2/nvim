@@ -219,10 +219,9 @@ end, { desc = "Format" })
 
 -- diagnostic
 local diagnostic_goto = function(next, severity)
-  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
   severity = severity and vim.diagnostic.severity[severity] or nil
   return function()
-    go({ severity = severity })
+    vim.diagnostic.jump({ count = next and 1 or -1, severity = severity })
   end
 end
 map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
@@ -236,10 +235,6 @@ map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 -- stylua: ignore start
 
 -- toggle options
-map("n", "<leader>uf", function()
-  require("conform").format({ async = true, lsp_fallback = true })
-end, { desc = "Format (toggle placeholder)" })
-
 map("n", "<leader>us", function() toggle_option("spell") end, { desc = "Toggle Spelling" })
 map("n", "<leader>uw", function() toggle_option("wrap") end, { desc = "Toggle Wrap" })
 map("n", "<leader>uL", function() toggle_option("relativenumber") end, { desc = "Toggle Relative Number" })

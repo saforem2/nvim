@@ -21,5 +21,11 @@ vim.lsp.enable({
   "marksman",
   "ast_grep",
   "jsonls",
+  "vtsls",
+  "yamlls",
+  "taplo",
+  "texlab",
+  "tailwindcss",
+  "astro",
   "copilot-language-server",
 })

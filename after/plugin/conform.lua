@@ -3,6 +3,8 @@ require("conform").setup({
     lua = { "stylua" },
     markdown = { "mdslw" },
   },
+  notify_on_error = true,
+  notify_no_formatters = false,
   formatters = {
     mdslw = { prepend_args = { "--stdin-filepath", "$FILENAME" } },
   },

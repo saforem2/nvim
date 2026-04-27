@@ -7,6 +7,7 @@ require("nvim-treesitter").install({
   "python", "markdown", "markdown_inline", "julia", "bash",
   "yaml", "lua", "vim", "query", "vimdoc", "latex",
   "html", "css", "dot", "javascript", "mermaid", "typescript",
+  "diff", "regex",
 })
 
 -- Incremental selection keymaps
