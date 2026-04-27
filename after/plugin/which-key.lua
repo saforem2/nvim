@@ -35,6 +35,16 @@ require("which-key").add({
   { "<leader>`", icon = "󰓡" },
   { "<leader>-", icon = "󰇘" },
   { "<leader>|", icon = "󰇙" },
+
+  -- Search keymaps
+  { "<leader>sg", icon = "󰑑" },
+  { "<leader>sw", icon = "󰗧" },
+  { "<leader>sl", icon = "󰗧" },
+  { "<leader>sh", icon = "󰌁" },
+  { "<leader>sk", icon = "󰌌" },
+  { "<leader>sc", icon = "" },
+  { "<leader>s:", icon = "" },
+  { "<leader>s/", icon = "" },
 })
 
 -- Markdown keymaps
