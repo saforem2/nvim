@@ -7,7 +7,8 @@ require("which-key").setup({
 
 require("which-key").add({
   -- Groups
-  { "<leader>a", group = "AI", icon = "󰚩" },
+  { "<leader>a", group = "AI (Copilot)", icon = "󰚩" },
+  { "<leader>C", group = "CodeCompanion", icon = "󱜚" },
   { "<leader>b", group = "Buffers", icon = "󰈚" },
   { "<leader>c", group = "Code", icon = "" },
   { "<leader>f", group = "Files/Find", icon = "󰉋" },
@@ -18,11 +19,14 @@ require("which-key").add({
   { "<leader>u", group = "UI Toggles", icon = "󰙵" },
   { "<leader>w", group = "Windows", icon = "" },
   { "<leader>x", group = "Lists", icon = "󰉹" },
+  { "<leader>t", group = "Treesitter", icon = "󰗀" },
   { "<leader><tab>", group = "Tabs", icon = "󰓩" },
 
   -- Standalone leader keymaps
+  { "<leader>e", icon = "󰙅" },
+  { "<leader>E", icon = "󰙅" },
   { "<leader>K", icon = "󰌌" },
-  { "<leader>k", icon = "󰁂" },
+  { "<leader>k", icon = "󰁂", desc = "Fold Section" },
   { "<leader>l", icon = "󰓙" },
   { "<leader>n", icon = "󰳡" },
   { "<leader>y", icon = "󰅍" },

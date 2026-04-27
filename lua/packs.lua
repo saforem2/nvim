@@ -89,6 +89,7 @@ vim.pack.add({
   gh("nvimdev/hlsearch.nvim"),
   gh("Pocco81/HighStr.nvim"),
   gh("ojroques/nvim-osc52"),
+  gh("ptdewey/yankbank-nvim"),
 
   -- Python
   gh("wookayin/semshi"),
@@ -123,6 +124,8 @@ vim.pack.add({
   -- AI / Chat
   { src = gh("CopilotC-Nvim/CopilotChat.nvim"), version = "main" },
   gh("nickjvandyke/opencode.nvim"),
+  gh("olimorris/codecompanion.nvim"),
+  gh("monkoose/neocodeium"),
 
   -- File navigation
   gh("dmtrKovalenko/fff.nvim"),
