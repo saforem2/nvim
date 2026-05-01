@@ -23,6 +23,7 @@ require("blink.cmp").setup({
   cmdline = { enabled = false },
   keymap = {
     preset = "enter",
+    ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
     ["<C-y>"] = { "select_and_accept" },
     ["<C-e>"] = { "cancel", "fallback" },
     ["<C-c>"] = { "cancel", "fallback" },
